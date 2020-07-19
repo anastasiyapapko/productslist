@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Product's list</title>
+</head>
+<body>
+    <div class="content">
+        <div class="navbar">
+            
+        </div>
+        <div class="row">
+          <div class="col-12">
+    
+    
+            <h1>The list of products</h1>
+            
+            <div class="input-group">
+              <fieldset>
+                <legend>Choose your product</legend>
+                <p><select id="pname" size="1" onchange="makeCatmenu(this.value)">
+                  <option value="" disabled selected>Choose a category</option>
+                  <option>Fruits</option>
+                  <option>Vegetables</option>
+                  </select></p>
+                </p><label for="products">Product:</label>
+                <select id="productSelect" >
+                  <option value="" disabled selected>Choose a product</option>
+                  <option></option>
+                </select>
+                </p>
+                <p><label>Amount: <input type="number" id="pnumber" ></label></p>
+                <p><label>Measure of weight: <input type="text" id="pweight" list=weight></label>
+                  <datalist id=weight>
+                   <option value="kg" label="kg">
+                   <option value="grams" label="grams">
+                   <option value="piece" label="piece">
+                  </datalist>
+                  
+               </fieldset>
+               <div class="input-group-append">
+                <button onclick="addItem()" class="btn btn-add" type="button">Add Item</button>
+              </div>
+              </fieldset>
+                
+              </div> 
+
+              
+              
+            </div>
+            
+            <!-- Lista produktów -->
+            <div class="list-of-products">
+                <ul id="listproduct" >
+        
+        
+                </ul>
+            </div>
+            
+            <!-- Counter dla produktów -->
+            <button onclick="productsNumber()">Press to count the products</button>
+            <p id="number"></p>
+
+            <!-- Dodawanie nowych produktów -->
+            <input type="text" id="inputFruit">
+            <button onclick="addNewFruit()">Add new fruit</button>
+            <p id="pTextFruit"></p>
+
+            <input type="text" id="inputVeg">
+            <button onclick="addNewVeg()">Add new vegetable</button>
+            <p id="pTextVeg"></p>
+
+
+    
+          </div>
+        </div>
+      </div>
+      <script src="main.js"></script>
+</body>
+
+</html>
